@@ -1,8 +1,8 @@
 import './App.css';
 import { BrowserRouter as Router } from "react-router-dom";
-import Welcome from '../src/components/Welcome';
+import Welcome from './components/Welcome';
 import { Provider } from 'react-redux';
-import store from '../store/index';
+import store from './store';
 
 function App() {
   return (

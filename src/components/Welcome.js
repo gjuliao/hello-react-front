@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { fetchGreeting } from '../actions/index';
+import { fetchGreeting } from '../actions';
 
 const Welcome = ({ greeting, fetchGreeting }) => {
 
