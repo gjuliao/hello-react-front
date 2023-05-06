@@ -1,7 +1,7 @@
 import './App.css';
-import { BrowserRouter as Router } from "react-router-dom";
-import Welcome from './components/Welcome';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import Welcome from './components/Welcome';
 import store from './store';
 
 function App() {

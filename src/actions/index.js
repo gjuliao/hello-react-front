@@ -16,16 +16,13 @@ export const fetchGreetingFailure = (error) => ({
   payload: error,
 });
 
-export const fetchGreeting = () => {
-    return async (dispatch) => {
-      dispatch(fetchGreetingRequest());
-      try {
-        const response = await fetch('http://127.0.0.1:3000/api/v1/greetings');
-        console.log(response)
-        const data = await response.json();
-        dispatch(fetchGreetingSuccess(data.message));
-      } catch (error) {
-        dispatch(fetchGreetingFailure(error));
-      }
-    };
-  };
+export const fetchGreeting = () => async (dispatch) => {
+  dispatch(fetchGreetingRequest());
+  try {
+    const response = await fetch('http://127.0.0.1:3000/api/v1/greetings');
+    const data = await response.json();
+    dispatch(fetchGreetingSuccess(data.message));
+  } catch (error) {
+    dispatch(fetchGreetingFailure(error));
+  }
+};
